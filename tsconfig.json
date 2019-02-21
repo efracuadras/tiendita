@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "ES5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+		"outFile": "tiendita.js"
+    },
+
+	"files": [
+        "productos.ts",
+        "descuentosbehaviors.ts",
+        "ventas.ts",
+        "tiendita.ts"
+	]
+
+}

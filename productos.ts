@@ -3,6 +3,7 @@ namespace Productos {
         protected cantidad : number;
         protected precio : number;
         protected unidad : String;
+        protected tipo : String;
 
         constructor( cantidad : number ){
             this.cantidad = cantidad;
@@ -10,6 +11,10 @@ namespace Productos {
 
         public getPrecio() : number {
             return this.cantidad * this.precio;
+        }
+
+        public getTipo() : String {
+            return this.tipo;
         }
     }
 
@@ -19,7 +24,7 @@ namespace Productos {
 
             this.precio = 15.5;
             this.unidad = 'Lt';
-            
+            this.tipo   = 'lacteo';
         }
     }
 
@@ -29,6 +34,7 @@ namespace Productos {
 
             this.precio = 10.0;
             this.unidad = 'Kg';
+            this.tipo   = 'lacteo';
             
         }
     }
@@ -39,6 +45,7 @@ namespace Productos {
 
             this.precio = 4.5;
             this.unidad = 'Kg';
+            this.tipo   = 'lacteo';
             
         }
     }
@@ -49,6 +56,7 @@ namespace Productos {
 
             this.precio = 35.0;
             this.unidad = 'Kg';
+            this.tipo   = 'embutido';
             
         }
     }
@@ -59,6 +67,7 @@ namespace Productos {
 
             this.precio = 100.0;
             this.unidad = 'Kg';
+            this.tipo   = 'lacteo';
             
         }
     }
@@ -69,6 +78,7 @@ namespace Productos {
 
             this.precio = 14.0;
             this.unidad = 'Kg';
+            this.tipo   = 'fruta';
             
         }
     }
@@ -79,6 +89,7 @@ namespace Productos {
 
             this.precio = 13.0;
             this.unidad = 'Kg';
+            this.tipo   = 'fruta';
             
         }
     }

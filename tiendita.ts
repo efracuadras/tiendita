@@ -13,9 +13,12 @@ namespace MiniDuckSimulator {
 
         let productos = [ leche, crema, mantequilla, queso, platanos, manzana ];
 
+        // Lunes
         let venta = new Ventas.Venta();
-        venta.setDescuentoBehavior( )
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Lunes() );
         venta.setProductos( productos );
-        
+
+        console.log('descueto: '+ venta.descuento() );
+        console.log('total: '+ venta.total() );
     }
 }
