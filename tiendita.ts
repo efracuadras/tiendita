@@ -2,7 +2,7 @@
 /// <reference path="productos.ts" />
 /// <reference path="descuentosbehaviors.ts" />
 
-namespace MiniDuckSimulator {
+namespace Tiendita {
     export function main() : void {
         let leche : Productos.Leche = new Productos.Leche(10);
         let crema : Productos.Crema = new Productos.Crema(0.5);
@@ -18,7 +18,32 @@ namespace MiniDuckSimulator {
         venta.setDescuentoBehavior( new DescuentosBehaviors.Lunes() );
         venta.setProductos( productos );
 
-        console.log('descueto: '+ venta.descuento() );
-        console.log('total: '+ venta.total() );
+        console.log("Lunes");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Martes() );
+        console.log("Martes");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Miercoles() );
+        console.log("Miercoles");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Jueves() );
+        console.log("Jueves");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Viernes() );
+        console.log("Viernes");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Sabado() );
+        console.log("Sabado");
+        venta.pagar();
+
+        venta.setDescuentoBehavior( new DescuentosBehaviors.Domingo() );
+        console.log("Domingo");
+        venta.pagar();
+        
     }
 }

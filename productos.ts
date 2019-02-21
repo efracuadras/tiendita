@@ -9,7 +9,7 @@ namespace Productos {
             this.cantidad = cantidad;
         }
 
-        public getPrecio() : number {
+        public getTotal() : number {
             return this.cantidad * this.precio;
         }
 

@@ -7,11 +7,15 @@
 		"outFile": "tiendita.js"
     },
 
-	"files": [
+	"include": [
         "productos.ts",
         "descuentosbehaviors.ts",
         "ventas.ts",
-        "tiendita.ts"
-	]
+        "tiendita.ts",
+        "main.ts"
+    ],
+    "exclude": [
+        ".git/*"
+    ]
 
 }

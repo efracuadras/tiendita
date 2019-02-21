@@ -10,13 +10,26 @@ namespace Ventas {
             this.descuentoBehavior = db;
         }
 
+        public pagar() : void {
+            let total = this.total();
+            let iva = total * 0.16;
+            let descuento = this.descuento();
+        
+            console.log(`Total : ${ total }`);
+            console.log(`Iva (16%) : ${ iva }`);
+            console.log(`Descuento : ${ descuento }`);
+            console.log('----------------------------');
+            console.log(`Total de Venta : ${ total + iva - descuento }`);
+
+            console.log('\n\n');
+        }
         public descuento() : number {
             return this.descuentoBehavior.descuento( this.productos );
         }
         
         public total() : number {
             return this.productos.reduce((total, producto)=>{
-                return total + producto.getPrecio();
+                return total + producto.getTotal();
             }, 0)
         }
 

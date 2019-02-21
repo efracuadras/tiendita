@@ -11,7 +11,7 @@ namespace DescuentosBehaviors {
 
             // DESCUENTO 5%
             return productos.reduce((total, producto)=>{
-                return total + ( producto.getPrecio() * .05 );
+                return total + ( producto.getTotal() * .05 );
             }, 0);
         }
     }
@@ -28,7 +28,7 @@ namespace DescuentosBehaviors {
             // menonita
             return productos.filter(( producto )=>{ return producto.getTipo() === 'lacteo'; })
                 .reduce((total, producto)=>{
-                    return total + ( producto.getPrecio() * .1 );
+                    return total + ( producto.getTotal() * .1 );
                 }, 0)
         }
     }
@@ -38,7 +38,7 @@ namespace DescuentosBehaviors {
             // fruta
             return productos.filter(( producto )=>{ return producto.getTipo() === 'fruta'; })
                 .reduce((total, producto)=>{
-                    return total + ( producto.getPrecio() * .15 );
+                    return total + ( producto.getTotal() * .15 );
                 }, 0)
         }
     }
@@ -50,13 +50,13 @@ namespace DescuentosBehaviors {
             // embutidos
             total += productos.filter(( producto )=>{ return producto.getTipo() === 'embutido'; })
                 .reduce((total, producto)=>{
-                    return total + ( producto.getPrecio() * .15 );
+                    return total + ( producto.getTotal() * .15 );
                 }, 0)
 
             // lacteos
             total += productos.filter(( producto )=>{ return producto.getTipo() === 'lacteo'; })
                 .reduce((total, producto)=>{
-                    return total + ( producto.getPrecio() * .15 );
+                    return total + ( producto.getTotal() * .15 );
                 }, 0)
 
             return total;
@@ -74,7 +74,7 @@ namespace DescuentosBehaviors {
         public descuento( productos : Array<Productos.Producto> ) : number {
             // DESCUENTO 5%
             return productos.reduce((total, producto)=>{
-                return total + ( producto.getPrecio() * .05 );
+                return total + ( producto.getTotal() * .05 );
             }, 0);
         }
     }
