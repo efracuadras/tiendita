@@ -1,12 +1,21 @@
 namespace Productos {
     export class Producto {
-        protected precio : Number;
+        protected cantidad : number;
+        protected precio : number;
         protected unidad : String;
+
+        constructor( cantidad : number ){
+            this.cantidad = cantidad;
+        }
+
+        public getPrecio() : number {
+            return this.cantidad * this.precio;
+        }
     }
 
     export class Leche extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 15.5;
             this.unidad = 'Lt';
@@ -15,8 +24,8 @@ namespace Productos {
     }
 
     export class Crema extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 10.0;
             this.unidad = 'Kg';
@@ -25,8 +34,8 @@ namespace Productos {
     }
 
     export class Mantequilla extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 4.5;
             this.unidad = 'Kg';
@@ -35,8 +44,8 @@ namespace Productos {
     }
 
     export class Jamon extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 35.0;
             this.unidad = 'Kg';
@@ -45,8 +54,8 @@ namespace Productos {
     }
 
     export class Queso extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 100.0;
             this.unidad = 'Kg';
@@ -55,8 +64,8 @@ namespace Productos {
     }
 
     export class Platano extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 14.0;
             this.unidad = 'Kg';
@@ -65,8 +74,8 @@ namespace Productos {
     }
 
     export class Manzana extends Producto {
-        constructor() {
-            super();
+        constructor( cantidad : number) {
+            super(cantidad);
 
             this.precio = 13.0;
             this.unidad = 'Kg';
