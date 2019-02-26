@@ -10,14 +10,17 @@ namespace Tiendita {
         let queso : Productos.Queso = new Productos.Queso(0.5);
         let platanos : Productos.Platano = new Productos.Platano(1);
         let manzana : Productos.Manzana = new Productos.Manzana(2);
+        let jamon : Productos.Jamon = new Productos.Jamon(1);
 
-        let productos = [ leche, crema, mantequilla, queso, platanos, manzana ];
+        let productos = [ leche, crema, mantequilla, queso, platanos, manzana, jamon ];
 
         // Lunes
         let venta = new Ventas.Venta();
         venta.setDescuentoBehavior( new DescuentosBehaviors.Lunes() );
-        venta.setProductos( productos );
-
+        
+        // venta.setProductos( productos );
+        productos.forEach((producto) => { venta.addProducto( producto ) });
+        
         console.log("Lunes");
         venta.pagar();
 

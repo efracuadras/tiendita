@@ -4,7 +4,7 @@
 namespace Ventas {
     export class Venta {
         protected descuentoBehavior : DescuentosBehaviors.DescuentoBehavior;
-        protected productos : Array<Productos.Producto>
+        protected productos : Array<Productos.Producto> = []
 
         public setDescuentoBehavior( db : DescuentosBehaviors.DescuentoBehavior ) : void {
             this.descuentoBehavior = db;
@@ -38,6 +38,7 @@ namespace Ventas {
         }
 
         public addProducto( producto : Productos.Producto ) : void {
+        
             this.productos.push( producto );
         }
     }
